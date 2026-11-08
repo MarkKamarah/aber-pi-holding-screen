@@ -1,0 +1,16 @@
+[Unit]
+Description=Holding screen (shows the latest image from the shared folder on HDMI)
+After=local-fs.target systemd-user-sessions.service
+
+[Service]
+Type=simple
+User=holdingscreen
+Group=holdingscreen
+SupplementaryGroups=video render
+RuntimeDirectory=holding-screen
+ExecStart=/opt/holding-screen/holding-screen.sh
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

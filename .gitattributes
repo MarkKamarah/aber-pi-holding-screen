@@ -1,0 +1,4 @@
+# Scripts run on Linux, so always keep Unix line endings, even when edited on Windows.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
